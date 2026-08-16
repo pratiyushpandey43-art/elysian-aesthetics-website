@@ -15,3 +15,5 @@ next-env.d.ts
 
 .DS_Store
 *.zip
+# Local Netlify folder
+.netlify
