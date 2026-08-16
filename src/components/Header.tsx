@@ -639,6 +639,14 @@ function MobileMenu({
 
   return (
     <nav className="mx-auto max-w-3xl px-5 pb-8 sm:px-8" aria-label="Mobile navigation">
+      <Link
+        href="/"
+        onClick={onNavigate}
+        className="flex min-h-16 items-center border-b border-line py-4 font-display text-xl text-espresso-900"
+      >
+        Home
+      </Link>
+
       <MobileAccordion
         menuKey="about"
         label="About Us"
@@ -931,6 +939,16 @@ export default function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 xl:flex" aria-label="Primary navigation">
+          <Link
+            href="/"
+            onClick={closeNavigation}
+            onFocus={() => setActiveMenu(null)}
+            onMouseEnter={() => setActiveMenu(null)}
+            className="relative py-3 text-[15px] text-espresso-800 after:absolute after:inset-x-0 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-espresso-900 after:transition-transform hover:after:scale-x-100"
+          >
+            Home
+          </Link>
+
           {DESKTOP_MENU_ITEMS.map((item) => (
             <button
               key={item.key}
